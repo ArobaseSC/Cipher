@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
+   <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <TextField fx:id="value" prefHeight="30.0" prefWidth="200.0" promptText="Entez votre texte..." />
+                  <TextField fx:id="key" prefHeight="30.0" prefWidth="90.0" promptText="Entrez la clé..." />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#onChiffrement" prefHeight="40.0" prefWidth="100.0" text="Chiffrer" />
+                  <Button mnemonicParsing="false" onMouseClicked="#onDechiffrement" prefHeight="40.0" prefWidth="100.0" text="Déchiffrer" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="result" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="500.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </bottom>
+   <top>
+      <VBox prefHeight="115.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBackMainMenu" prefHeight="25.0" prefWidth="50.0" text="⥷" />
+            <Text lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le code de Vigenère est un système de chiffrement par substitution poly-alphabétique utilisant une clé et un tableau à double entrée.&#10;Exemple :&#10;'Bonjour' {cle} -&gt; 'dzrlzyt'" textAlignment="CENTER" wrappingWidth="599.4439697265625">
+               <font>
+                  <Font name="Bell MT Italic" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

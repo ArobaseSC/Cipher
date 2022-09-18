@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
+   <center>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <TextField fx:id="value" prefHeight="30.0" prefWidth="200.0" promptText="Entez votre texte..." />
+                  <TextField fx:id="key" prefHeight="30.0" prefWidth="90.0" promptText="Entrez la clé..." />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onMouseClicked="#onChiffrement" prefHeight="40.0" prefWidth="100.0" text="Chiffrer" />
+                  <Button mnemonicParsing="false" onMouseClicked="#onDechiffrement" prefHeight="40.0" prefWidth="100.0" text="Déchiffrer" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="result" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="500.0" />
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </bottom>
+   <top>
+      <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBackMainMenu" prefHeight="25.0" prefWidth="50.0" text="⥷" BorderPane.alignment="TOP_LEFT" />
+   </top>
+</BorderPane>
