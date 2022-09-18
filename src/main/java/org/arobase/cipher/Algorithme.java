@@ -122,4 +122,6 @@ public class Algorithme {
         }
         return propositions;
     }
+
+
 }
