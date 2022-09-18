@@ -36,9 +36,6 @@ public class Controller {
             case "Vigenere" -> {
                 textArea.setText(Algorithme.vigenereChiffrement(value.getText(), key.getText()));
             }
-            case "Brut-Force" -> {
-                textArea.setText(Algorithme.brutForce(value.getText()).toString());
-            }
         }
     }
 
@@ -53,6 +50,9 @@ public class Controller {
             }
             case "Vigenere" -> {
                 textArea.setText(Algorithme.vigenereDechiffrement(value.getText(), key.getText()));
+            }
+            case "Brut-Force" -> {
+                textArea.setText(Algorithme.brutForce(value.getText()).toString().replace("[", "").replace("]", "").replace(", ", "\n"));
             }
         }
     }

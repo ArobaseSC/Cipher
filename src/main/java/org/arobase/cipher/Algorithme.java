@@ -102,15 +102,23 @@ public class Algorithme {
     }
 
     public static List<String> brutForce(String texte){
+
         List<String> propositions = new ArrayList<>();
         StringBuilder stringBuilder;
 
-        for(int i = 0 ; i < 25 ; i++){
+        for(int k = 1; k < ALPHABET.length(); k++){
             stringBuilder = new StringBuilder();
-            for(char c : texte.toCharArray()){
-                stringBuilder.append(ALPHABET.indexOf( (ALPHABET.indexOf(c)+i) % 25));
+            for (Character c : texte.toCharArray()) {
+                if(Character.isLetter(c)) {
+                    char newChar = ALPHABET.charAt((ALPHABET.indexOf(Character.toUpperCase(c)) + k) % ALPHABET.length());
+                    newChar = Character.isUpperCase(c) ? Character.toUpperCase(newChar) : Character.toLowerCase(newChar);
+                    stringBuilder.append(newChar);
+                }else{
+                    stringBuilder.append(c);
+                }
             }
-            propositions.add(stringBuilder.toString());
+            propositions.add("Clef : "+k+" Message : "+ stringBuilder);
+            System.out.println("Clef : "+k+" Message : "+stringBuilder);
         }
         return propositions;
     }

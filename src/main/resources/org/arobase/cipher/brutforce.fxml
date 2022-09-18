@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
    <center>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER" prefHeight="81.0" prefWidth="600.0" spacing="50.0">
                <children>
-                  <TextField fx:id="value" prefHeight="30.0" prefWidth="200.0" promptText="Entez votre texte..." />
-                  <TextField fx:id="key" prefHeight="30.0" prefWidth="90.0" promptText="Entrez la clé..." />
+                  <TextField fx:id="value" prefHeight="41.0" prefWidth="358.0" promptText="Entez votre texte..." />
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="600.0" spacing="20.0">
+            <HBox alignment="CENTER" prefHeight="78.0" prefWidth="600.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" onMouseClicked="#onChiffrement" prefHeight="40.0" prefWidth="100.0" text="Chiffrer" />
-                  <Button mnemonicParsing="false" onMouseClicked="#onDechiffrement" prefHeight="40.0" prefWidth="100.0" text="Déchiffrer" />
+                  <Button mnemonicParsing="false" onMouseClicked="#onDechiffrement" prefHeight="41.0" prefWidth="112.0" text="Déchiffrer">
+                     <HBox.margin>
+                        <Insets bottom="20.0" />
+                     </HBox.margin></Button>
                </children>
             </HBox>
          </children>
@@ -26,7 +32,7 @@
    <bottom>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" BorderPane.alignment="CENTER">
          <children>
-            <TextArea fx:id="result" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="500.0" />
+            <TextArea fx:id="result" editable="false" layoutY="-63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="153.0" prefWidth="500.0" />
          </children>
          <BorderPane.margin>
             <Insets />
