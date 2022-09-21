@@ -24,6 +24,11 @@ public class Controller {
     }
 
     @FXML
+    protected void onSwitchCesarBlockScene(MouseEvent event){
+        Application.loadScene("cesarblock.fxml", "Cesar-Block");
+    }
+
+    @FXML
     protected void onChiffrement(Event event) {
         TextArea textArea = (TextArea) Application.getScene().lookup("#result");
         TextField value = (TextField) Application.getScene().lookup("#value");
@@ -35,6 +40,9 @@ public class Controller {
             }
             case "Vigenere" -> {
                 textArea.setText(Algorithme.vigenereChiffrement(value.getText(), key.getText()));
+            }
+            case "Cesar-Block" -> {
+                textArea.setText(Algorithme.cesarBlockChiffrementParChiffre(value.getText(), Integer.parseInt(key.getText())));
             }
         }
     }
@@ -53,6 +61,9 @@ public class Controller {
             }
             case "Brut-Force" -> {
                 textArea.setText(Algorithme.brutForce(value.getText()).toString().replace("[", "").replace("]", "").replace(", ", "\n"));
+            }
+            case "Cesar-Block" -> {
+                textArea.setText(Algorithme.cesarBlockDechiffrementParChiffre(value.getText(), Integer.parseInt(key.getText())));
             }
         }
     }

@@ -155,7 +155,7 @@ public class Algorithme {
     }
 
 
-    public static String CesarBlockDechiffrementParChiffre(String texte, int key){
+    public static String cesarBlockDechiffrementParChiffre(String texte, int key){
         String[] tab  = texte.split("\\.");
         StringBuilder result = new StringBuilder();
         StringBuilder stringBuilder;
@@ -180,9 +180,7 @@ public class Algorithme {
         return result.toString();
     }
 
-
-
-    public static String CesarBlockChiffrementParChiffre(String texte, int key){
+    public static String cesarBlockChiffrementParChiffre(String texte, int key){
         String[] tab  = texte.split("\\.");
         StringBuilder result = new StringBuilder();
         StringBuilder stringBuilder;
@@ -209,7 +207,7 @@ public class Algorithme {
 
 
 
-    public static String CesarAffineChiffrement(String message, int a, int b){
+    public static String cesarAffineChiffrement(String message, int a, int b){
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < message.length(); i++) {
             char c = Character.toUpperCase(message.charAt(i));
