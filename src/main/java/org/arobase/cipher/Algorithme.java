@@ -154,4 +154,64 @@ public class Algorithme {
         return propositions;
     }
 
+
+    public static String CesarBlockDechiffrementParChiffre(String texte, int key){
+        String[] tab  = texte.split("\\.");
+        StringBuilder result = new StringBuilder();
+        StringBuilder stringBuilder;
+        DecimalFormat nf2 = new DecimalFormat("0000");
+        for (String s : tab) {
+            int index = Integer.parseInt(s);
+            if (index-key<0){
+                index = 2526+(index-key);
+            }else{
+                index = index-key;
+            }
+            stringBuilder = new StringBuilder(nf2.format(index));
+            for (int j = 0; j < stringBuilder.length(); j+=2) {
+                String temp2 = ""+stringBuilder.charAt(j)+stringBuilder.charAt(j+1);
+                index = Integer.parseInt(temp2);
+                if (index>25){
+                    index = index%26;
+                }
+                result.append(ALPHABET.charAt(index));
+            }
+        }
+        return result.toString();
+    }
+
+
+
+    public static String CesarBlockChiffrementParChiffre(String texte, int key){
+        String[] tab  = texte.split("\\.");
+        StringBuilder result = new StringBuilder();
+        StringBuilder stringBuilder;
+        DecimalFormat nf2 = new DecimalFormat("0000");
+        for (String s : tab) {
+            int index = Integer.parseInt(s);
+            if (index+key>2526){
+                index = (index+key)-2526;
+            }else{
+                index = index+key;
+            }
+            stringBuilder = new StringBuilder(nf2.format(index));
+            for (int j = 0; j < stringBuilder.length(); j+=2) {
+                String temp2 = ""+stringBuilder.charAt(j)+stringBuilder.charAt(j+1);
+                index = Integer.parseInt(temp2);
+                if (index>25){
+                    index = index%26;
+                }
+                result.append(ALPHABET.charAt(index));
+            }
+        }
+        return result.toString();
+    }
+
+
+
+
+
+
+
+
 }
