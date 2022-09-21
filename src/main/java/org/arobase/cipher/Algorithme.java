@@ -209,7 +209,19 @@ public class Algorithme {
 
 
 
-
+    public static String CesarAffineChiffrement(String message, int a, int b){
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < message.length(); i++) {
+            char c = Character.toUpperCase(message.charAt(i));
+            if (ALPHABET.contains(String.valueOf(c))){
+                int index = (ALPHABET.indexOf(c)*a+b)%26;
+                result.append(ALPHABET.charAt(index));
+            }else {
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
 
 
 
