@@ -222,6 +222,36 @@ public class Algorithme {
     }
 
 
+    public static String CesarAffineDechiffrement(String message, int a, int b){
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < message.length(); i++) {
+            char c = Character.toUpperCase(message.charAt(i));
+            if (ALPHABET.contains(String.valueOf(c))){
+                int index = ((ALPHABET.indexOf(c)-b)*modInverse(a,26))%26;
+                if (index<0){
+                    index = 26+index;
+                }
+                result.append(ALPHABET.charAt(index));
+            }else {
+                result.append(c);
+            }
+        }
+        return result.toString();
+    }
+
+
+
+    static int modInverse(int a, int m)
+    {
+        for (int x = 1; x < m; x++)
+            if (((a%m) * (x%m)) % m == 1)
+                return x;
+        return 1;
+    }
+
+
+
+
 
 
 }
