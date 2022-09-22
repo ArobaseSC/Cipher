@@ -20,7 +20,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="78.0" prefWidth="600.0" spacing="10.0">
                <children>
-                  <Button mnemonicParsing="false" onMouseClicked="#onDechiffrement" prefHeight="41.0" prefWidth="112.0" text="Déchiffrer">
+                  <Button mnemonicParsing="false" onMouseClicked="#onDechiffrement" prefHeight="41.0" prefWidth="112.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-background-radius: 20; -fx-border-radius: 20;" text="Déchiffrer">
                      <HBox.margin>
                         <Insets bottom="20.0" />
                      </HBox.margin></Button>
@@ -40,6 +40,9 @@
       </Pane>
    </bottom>
    <top>
-      <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBackMainMenu" prefHeight="25.0" prefWidth="50.0" text="⥷" BorderPane.alignment="TOP_LEFT" />
+      <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBackMainMenu" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-background-radius: 20; -fx-border-radius: 20;" text="⥷" BorderPane.alignment="TOP_LEFT">
+         <BorderPane.margin>
+            <Insets left="10.0" top="10.0" />
+         </BorderPane.margin></Button>
    </top>
 </BorderPane>

@@ -25,6 +25,21 @@
           <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarScene" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-background-radius: 20; -fx-border-radius: 20;" text="César" textFill="#1e3d59" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="69.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@julius-caesar-4206555_960_720.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
             <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchVigenereScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="Vigenère" textFill="#1e3d59" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <graphic>
                   <ImageView fitHeight="65.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
@@ -66,7 +81,7 @@
                      </image>
                   </ImageView>
                </graphic></Button>
-            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="31.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarBlockScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="Affine" textFill="#1e3d59" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" disable="true" layoutX="31.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarBlockScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="Affine" textFill="#1e3d59" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Bell MT" size="14.0" />
                </font>
@@ -78,20 +93,17 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarScene" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-background-radius: 20; -fx-border-radius: 20;" text="César" textFill="#1e3d59" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <graphic>
-                  <ImageView fitHeight="70.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@julius-caesar-4206555_960_720.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" disable="true" layoutX="225.0" layoutY="162.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarBlockScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="Fréquence" textFill="#1e3d59" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Bell MT" size="14.0" />
                </font>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
+               <graphic>
+                  <ImageView fitHeight="68.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
          <BorderPane.margin>

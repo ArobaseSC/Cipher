@@ -43,7 +43,10 @@
    <top>
       <VBox prefHeight="115.0" prefWidth="611.0" spacing="15.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBackMainMenu" prefHeight="25.0" prefWidth="50.0" text="⥷" />
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onBackMainMenu" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-background-radius: 20; -fx-border-radius: 20;" text="⥷">
+               <VBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </VBox.margin></Button>
             <Text lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le code César est un chiffrement par décalage parmi les plus faciles et les plus connus qui utilise la substitution d'une lettre par une autre plus loin dans l'alphabet.&#10;Exemple : &#10;'Bonjour' {+1} -&gt; 'Cpokpvs'" textAlignment="CENTER" wrappingWidth="599.4439392089844">
                <font>
                   <Font name="Bell MT Italic" size="12.0" />
