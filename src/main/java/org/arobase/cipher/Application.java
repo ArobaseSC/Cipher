@@ -22,7 +22,7 @@ public class Application extends javafx.application.Application {
         Application.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(Application.class.getResource("main.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Cypher");
+        stage.setTitle("Cipher");
         stage.setScene(scene);
         stage.show();
     }
