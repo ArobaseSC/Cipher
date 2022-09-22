@@ -118,7 +118,9 @@ public class Algorithme {
             char c = texte.charAt(i);
             if(Character.isLetter(c)){
                 int index = ALPHABET.indexOf(Character.toUpperCase(c));
-                int newIndex = (index + keyIndexs.get(incrementation % keyIndexs.size())) % ALPHABET.length();
+                int newIndex = index - keyIndexs.get(incrementation % keyIndexs.size());
+                if(newIndex < 0) newIndex+=ALPHABET.length();
+                newIndex = newIndex % ALPHABET.length();
                 incrementation++;
                 if(Character.isUpperCase(c)){
                     result.append(ALPHABET.charAt(newIndex));
@@ -204,8 +206,6 @@ public class Algorithme {
         }
         return result.toString();
     }
-
-
 
     public static String cesarAffineChiffrement(String message, int a, int b){
         StringBuilder result = new StringBuilder();

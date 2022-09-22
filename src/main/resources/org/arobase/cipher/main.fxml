@@ -11,12 +11,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f5f0e1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
    <center>
       <GridPane BorderPane.alignment="CENTER">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="10.0" prefWidth="200.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="200.0" minHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
@@ -24,22 +25,7 @@
           <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button alignment="CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarScene" prefHeight="100.0" prefWidth="150.0" text="César" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
-               <graphic>
-                  <ImageView fitHeight="70.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@julius-caesar-4206555_960_720.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font name="Bell MT" size="14.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-            </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchVigenereScene" prefHeight="100.0" prefWidth="150.0" text="Vigenère" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchVigenereScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="Vigenère" textFill="#1e3d59" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <graphic>
                   <ImageView fitHeight="65.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -51,7 +37,7 @@
                   <Font name="Bell MT" size="14.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchBrutForceScene" prefHeight="100.0" prefWidth="150.0" text="Brut-Force" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchBrutForceScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="Brut-Force" textFill="#1e3d59" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                <graphic>
                   <ImageView fitHeight="83.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -69,7 +55,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button alignment="CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarBlockScene" prefHeight="100.0" prefWidth="150.0" text="César Block" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarBlockScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="César Block" textFill="#1e3d59" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <font>
                   <Font name="Bell MT" size="14.0" />
                </font>
@@ -80,6 +66,33 @@
                      </image>
                   </ImageView>
                </graphic></Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" layoutX="31.0" layoutY="165.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarBlockScene" prefHeight="100.0" prefWidth="150.0" style="-fx-border-color: #1e3d59; -fx-background-color: rgba(218,178,68,0.2); -fx-background-radius: 20; -fx-border-radius: 20;" text="Affine" textFill="#1e3d59" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="85.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true" translateY="-15.0">
+                     <image>
+                        <Image url="@Capture_d_écran_2022-09-22_085826-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button alignment="BOTTOM_CENTER" contentDisplay="TOP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#onSwitchCesarScene" prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-background-radius: 20; -fx-border-radius: 20;" text="César" textFill="#1e3d59" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="70.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@julius-caesar-4206555_960_720.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Bell MT" size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
          </children>
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -87,9 +100,9 @@
       </GridPane>
    </center>
    <bottom>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="By KINZELIN Rémy - POMIN Samuel" BorderPane.alignment="BOTTOM_RIGHT">
+      <Text fill="#1e3d59" strokeType="OUTSIDE" strokeWidth="0.0" text="By KINZELIN Rémy - POMIN Samuel" wrappingWidth="197.4889538884163" BorderPane.alignment="BOTTOM_RIGHT">
          <font>
-            <Font name="Bell MT" size="10.0" />
+            <Font name="Bell MT" size="12.0" />
          </font>
          <BorderPane.margin>
             <Insets bottom="5.0" right="10.0" />
@@ -97,7 +110,7 @@
       </Text>
    </bottom>
    <top>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\@Cipher" textAlignment="JUSTIFY" underline="true" BorderPane.alignment="CENTER">
+      <Text fill="#1e3d59" strokeType="OUTSIDE" strokeWidth="0.0" text="\@Cipher" textAlignment="JUSTIFY" underline="true" BorderPane.alignment="CENTER">
          <font>
             <Font name="Candara" size="35.0" />
          </font>
