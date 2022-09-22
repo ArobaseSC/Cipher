@@ -8,20 +8,24 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f5f0e1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
    <center>
       <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
                   <TextField fx:id="value" prefHeight="30.0" prefWidth="200.0" promptText="Entez votre texte..." />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Y = " />
                   <TextField fx:id="key" prefHeight="30.0" prefWidth="90.0" promptText="Entrez la clé..." />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="x +" />
+                  <TextField fx:id="key1" prefHeight="30.0" prefWidth="90.0" promptText="Entrez la clé..." />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="78.0" prefWidth="600.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" onMouseClicked="#onChiffrement" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-background-radius: 20; -fx-border-radius: 20;" text="Chiffrer" />
+                  <Button mnemonicParsing="false" onMouseClicked="#onChiffrement" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-border-radius: 20; -fx-background-radius: 20;" text="Chiffrer" />
                   <Button mnemonicParsing="false" onMouseClicked="#onDechiffrement" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: rgba(218,178,68,0.2); -fx-border-color: #1e3d59; -fx-border-radius: 20; -fx-background-radius: 20;" text="Déchiffrer" />
                </children>
             </HBox>

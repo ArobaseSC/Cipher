@@ -8,8 +8,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f5f0e1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.arobase.cipher.Controller">
    <center>
@@ -47,14 +45,6 @@
                <VBox.margin>
                   <Insets left="10.0" top="10.0" />
                </VBox.margin></Button>
-            <Text lineSpacing="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Le code César est un chiffrement par décalage parmi les plus faciles et les plus connus qui utilise la substitution d'une lettre par une autre plus loin dans l'alphabet.&#10;Exemple : &#10;'Bonjour' {+1} -&gt; 'Cpokpvs'" textAlignment="CENTER" wrappingWidth="599.4439392089844">
-               <font>
-                  <Font name="Bell MT Italic" size="12.0" />
-               </font>
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-            </Text>
          </children>
          <BorderPane.margin>
             <Insets />

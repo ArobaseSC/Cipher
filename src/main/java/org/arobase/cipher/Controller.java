@@ -2,9 +2,13 @@ package org.arobase.cipher;
 
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.paint.Paint;
 
 public class Controller {
 
@@ -24,8 +28,27 @@ public class Controller {
     }
 
     @FXML
+    protected void onSwitchAffineScene(MouseEvent event){
+        Application.loadScene("affine.fxml", "Affine");
+    }
+
+    @FXML
     protected void onSwitchCesarBlockScene(MouseEvent event){
         Application.loadScene("cesarblock.fxml", "Cesar-Block");
+    }
+
+    @FXML
+    protected void onButtonEnter(Event event) {
+        Button button = (Button) event.getTarget();
+        button.setPrefWidth(165);
+        button.setPrefHeight(110);
+    }
+
+    @FXML
+    protected void onButtonExit(Event event){
+        Button button = (Button) event.getTarget();
+        button.setPrefWidth(150);
+        button.setPrefHeight(100);
     }
 
     @FXML
@@ -43,6 +66,10 @@ public class Controller {
             }
             case "Cesar-Block" -> {
                 textArea.setText(Algorithme.cesarBlockChiffrementParChiffre(value.getText(), Integer.parseInt(key.getText())));
+            }
+            case "Affine" -> {
+                TextField key1 = (TextField) Application.getScene().lookup("#key1");
+                textArea.setText(Algorithme.cesarAffineChiffrement(value.getText(), Integer.parseInt(key.getText()), Integer.parseInt(key1.getText())));
             }
         }
     }
