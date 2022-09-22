@@ -92,6 +92,10 @@ public class Controller {
             case "Cesar-Block" -> {
                 textArea.setText(Algorithme.cesarBlockDechiffrementParChiffre(value.getText(), Integer.parseInt(key.getText())));
             }
+            case "Affine" -> {
+                TextField key1 = (TextField) Application.getScene().lookup("#key1");
+                textArea.setText(Algorithme.cesarAffineDechiffrement(value.getText(), Integer.parseInt(key.getText()), Integer.parseInt(key1.getText())));
+            }
         }
     }
 

@@ -222,7 +222,7 @@ public class Algorithme {
     }
 
 
-    public static String CesarAffineDechiffrement(String message, int a, int b){
+    public static String cesarAffineDechiffrement(String message, int a, int b){
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < message.length(); i++) {
             char c = Character.toUpperCase(message.charAt(i));
